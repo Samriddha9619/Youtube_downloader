@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import youtube_downloader
+from .views import *
 
 urlpatterns = [
-    path('', youtube_downloader, name='youtube_downloader'),
+    path('', youtube, name='youtube'),
 ]
