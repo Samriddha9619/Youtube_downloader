@@ -1,7 +1,7 @@
 
 from http.client import HTTPResponse
 from django.shortcuts import render, redirect 
-from pytube import YouTube
+from pytubefix import YouTube
 
 
 
