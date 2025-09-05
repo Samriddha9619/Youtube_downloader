@@ -1,91 +1,103 @@
-Django YouTube Video Downloader
-A simple and clean web application built with Django and Python to download YouTube videos directly from a URL. The application uses the pytubefix library to fetch video data and streams the file directly to the user's browser without saving it on the server.
+# 🎥 Django YouTube Video Downloader
 
-Features
-Simple Interface: A clean, modern, and responsive user interface for a seamless experience.
+A simple and clean web application built with **Django** and **Python** to download YouTube videos directly from a URL.  
+The application uses the **pytubefix** library to fetch video data and streams the file directly to the user's browser without saving it on the server.
 
-Direct Download: Enter a YouTube video URL and get an instant download link.
+---
 
-Serverless Streaming: Videos are streamed directly to the user's browser, saving server disk space and bandwidth.
+## ✨ Features
+- **Simple Interface**: Clean, modern, and responsive UI for a seamless experience.  
+- **Direct Download**: Enter a YouTube video URL and get an instant download link.  
+- **Serverless Streaming**: Videos are streamed directly to the user's browser (no server storage).  
+- **Error Handling**: User-friendly messages for invalid links or errors.  
+- **Lightweight**: Minimal dependencies → fast & easy to deploy.  
 
-Error Handling: Provides user-friendly feedback for invalid links or other download errors.
+---
 
-Lightweight: Built with minimal dependencies, making it fast and easy to deploy.
+## 🛠 Tech Stack
+- **Backend**: Python, Django  
+- **YouTube API**: pytubefix  
+- **Frontend**: HTML, CSS  
+- **Python Version**: 3.8+  
 
-Tech Stack
-Backend: Python, Django
+---
 
-YouTube API: pytubefix
+## 🚀 Setup and Installation
 
-Frontend: HTML, CSS
+Follow these steps to run the project locally:
 
-Python Version: 3.8+
+### 1. Prerequisites
+- Python 3.8 or higher  
+- pip (Python package installer)  
 
-Setup and Installation
-Follow these steps to get the project running on your local machine.
+### 2. Clone the Repository
+```bash
+git clone https://github.com/Samriddha9619/Youtube_downloader.git
+cd Youtube_downloader
+```
 
-1. Prerequisites
-Python 3.8 or higher
-
-pip (Python package installer)
-
-2. Clone the Repository
-Clone this repository to your local machine using Git:
-
-git clone [https://github.com/Samriddha9619/Youtube_downloader.git](https://github.com/Samriddha9619/Youtube_downloader.git)
-cd your-repository-name
-
-3. Create and Activate a Virtual Environment
-It's a best practice to create a virtual environment to manage project dependencies.
-
-# For Windows
+### 3. Create and Activate a Virtual Environment  
+**For Windows**  
+```bash
 python -m venv venv
 venv\Scripts\activate
+```
 
-# For macOS/Linux
+**For macOS/Linux**  
+```bash
 python3 -m venv venv
 source venv/bin/activate
+```
 
-4. Install Dependencies
-Install all the required Python packages using the requirements.txt file.
-
+### 4. Install Dependencies
+```bash
 pip install -r requirements.txt
+```
 
+> 💡 If you don’t have a `requirements.txt`, create one after installing manually:  
+```bash
+pip install django pytubefix
 pip freeze > requirements.txt
+```
 
-5. Run Django Migrations
-Although this simple project doesn't use a database, it's good practice to run initial migrations.
-
+### 5. Run Django Migrations
+```bash
 python manage.py migrate
+```
 
-6. Start the Development Server
-You're all set! Start the Django development server.
-
+### 6. Start the Development Server
+```bash
 python manage.py runserver
+```
 
-The application will be running at http://127.0.0.1:8000/.
+Your app will be live at:  
+👉 http://127.0.0.1:8000/
 
-Usage
-Open your web browser and navigate to http://127.0.0.1:8000/.
+---
 
-Copy the URL of the YouTube video you want to download.
+## 📌 Usage
+1. Open the app in your browser.  
+2. Copy the YouTube video URL.  
+3. Paste it into the input field and click **Submit**.  
+4. Your browser will prompt you to save the video file (`.mp4`).  
 
-Paste the URL into the input field on the page.
+---
 
-Click the "Submit" button.
+## 📂 Project Structure
+```
+Youtube_downloader/
+│── downloader/
+│   ├── views.py              # Handles form, fetches video, streams response
+│   ├── templates/downloader/youtube.html  # Main HTML UI
+│   ├── static/downloader/style.css        # CSS styling
+│   └── urls.py               # URL routes
+│
+├── manage.py
+└── requirements.txt
+```
 
-Your browser will prompt you to save the video file (.mp4).
+---
 
-Project Structure
-Here is a brief overview of the key files in the downloader app:
-
-views.py: Contains the main logic for handling the form submission, fetching the video using pytubefix, and streaming the response.
-
-templates/downloader/youtube.html: The HTML template that renders the user interface.
-
-static/downloader/style.css: The CSS file that styles the HTML page.
-
-urls.py: Defines the URL routes for the application.
-
-License
-This project is licensed under the MIT License. See the LICENSE file for more details.
+## 📄 License
+This project is licensed under the **MIT License**.  
+See the LICENSE file for details.
